@@ -6,5 +6,7 @@ namespace Job_Tracker.Models{
         public DbSet <Job> Jobs {get;set;}
 
         public DbSet <Company> Companies {get;set;}
+
+        public DbSet <Recruiter> Recruiters {get;set;}
     }
 }

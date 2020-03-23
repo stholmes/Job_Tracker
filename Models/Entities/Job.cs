@@ -17,14 +17,12 @@ namespace Job_Tracker{
 
         [Required]
         [DataType(DataType.Date)]
-        public DateTime JobApplied {get;set;}
+        public DateTime JobAppliedDate {get;set;}
 
         public string JobNotes {get;set;}
 
         public bool isRejected {get;set;} = false;
-        public string RecruiterName {get;set;}
-        public string RecruiterEmail {get;set;}
-        public string RecruiterNumber {get;set;}
+        
 
         public bool hasRequestedInterview {get;set;}
 
@@ -32,5 +30,7 @@ namespace Job_Tracker{
         public DateTime InterviewDate {get;set;}
 
         public int CompanyID {get;set;}
+
+        public int RecruiterID {get;set;}
     }
 }

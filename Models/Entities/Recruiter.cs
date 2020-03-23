@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
 namespace Job_Tracker{
     public class Recruiter{
@@ -12,6 +13,8 @@ namespace Job_Tracker{
 
         [Required]
         public string RecruiterPhoneNumber {get;set;}
-        
+
+        public List<Job> Jobs {get;set;}
+
     }
 }
