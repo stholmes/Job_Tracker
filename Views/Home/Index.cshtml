@@ -9,26 +9,28 @@
 
 
     <div class="row mt-5">
-        <div class="col-12">
+        <div class="col-md-2 border">
             <p>View jobs by:</p>
+            <div class="row">
+                <ul class="sort-by">
+                    <li class="active"><a href="#">Company</a></li>
+                    <li><a href="#">Type</a></li>
+                    <li><a href="#">Status</a></li>
+                    <li><a href="#">Date</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Company</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-3 col-sm-6 text-center active"><a href="#">Company</a></div>
-        <div class="col-md-3 col-sm-6 text-center"><a href="#">Type</a></div>
-        <div class="col-md-3 col-sm-6 text-center"><a href="#">Status</a></div>
-        <div class="col-md-3 col-sm-6 text-center"><a href="#">Status</a></div>
-    </div>
-    <div class="row mt-2 justify-content-center">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Title</th>
-                    <th scope="col">Company</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Action</th>
-                </tr>
-            </thead>
-        </table>
-    </div>
-</div.row>
+</div>
