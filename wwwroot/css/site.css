@@ -1,7 +1,11 @@
 ﻿.active:after{
   content: "\2713 ";
-  color:red;
+  color:black;
   width:25px;
-  padding-left:5px;
-  font-size:1.25rem;
+  padding-left:0px;
+  font-size:1.35rem;
+}
+
+ul.sort-by{
+  list-style: none;
 }
