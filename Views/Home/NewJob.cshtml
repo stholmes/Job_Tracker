@@ -23,17 +23,48 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="form-group">
-                            <label asp-for="@Model.JobURL"></label>
-                            <input  class="form-control" type="text" asp-for="@Model.JobURL">
+                            <label asp-for="@Model.Company.CompanyName"></label>
+                            <input  class="form-control" type="text" asp-for="@Model.Company.CompanyName">
                         </div>
                     </div>
+                    
                 </div>
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <div class="form-group">
-                            <label asp-for="@Model.JobAppliedDate"></label>
-                            <input  class="form-control" type="date" asp-for="@Model.JobAppliedDate" >
+                            <label asp-for="@Model.JobCategory"></label>
+                            <select  class="form-control" asp-for="@Model.JobCategory">
+                                <option value=0 selected>Select Category</option>
+                                <option value=1>Frontend Developer</option>
+                                <option value=2>Fullstack Developer</option>
+                                <option value=3>Database Admin</option>
+                                <option value=4>Database Developer</option>
+                                <option value=5>Other</option>
+                            </select>
                         </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            <label asp-for="@Model.JobURL"></label>
+                            <input  class="form-control" type="text" asp-for="@Model.JobURL">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            <label asp-for="@Model.JobAppliedDate"></label>
+                            <input  class="form-control" asp-for="@Model.JobAppliedDate" >
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <label asp-for="@Model.JobNotes"></label>
+                        <textarea class="form-control" asp-for="@Model.JobNotes"  cols="20" rows="5"></textarea>
+                    </div>
+                    <div class="col-4 align-self-end text-right">
+                        <a href="/" class="btn btn-danger align-baseline">Cancel</a>
+                        <input class="align-baseline btn btn-success" type="submit" value="Add Job" >
                     </div>
                 </div>
 
@@ -42,4 +73,3 @@
     </div>
 
 
-<h1>NEW</h1>
