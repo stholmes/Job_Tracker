@@ -9,18 +9,20 @@ namespace Job_Tracker{
         [Required]
         public string JobTitle {get;set;}
 
-        [Required]
+        [Display(Name="Posting URL")]
         public string JobURL {get;set;}
 
         [Required]
-        public string JobPDF {get;set;}
+        [Display(Name="Category")]
+        public int JobCategory {get;set;}
 
         [Required]
         [DataType(DataType.Date)]
-        public DateTime JobAppliedDate {get;set;}
-
+        [Display(Name ="Date Applied")]
+        public DateTime JobAppliedDate {get;set;} =DateTime.Now.Date;
+        [Display(Name="Notes")]
         public string JobNotes {get;set;}
-
+        
         public bool isRejected {get;set;} = false;
         
 
@@ -30,6 +32,8 @@ namespace Job_Tracker{
         public DateTime InterviewDate {get;set;}
 
         public int CompanyID {get;set;}
+
+        public Company Company {get;set;}
 
         public int RecruiterID {get;set;}
     }
