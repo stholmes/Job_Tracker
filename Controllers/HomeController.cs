@@ -17,18 +17,16 @@ namespace Job_Tracker.Controllers
         }
         public IActionResult Index()
         {
+
+            System.Console.WriteLine();
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpGet("new")]
+        public IActionResult NewJob()
         {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            Job viewModel = new Job();
+            return View(viewModel);
         }
     }
 }
