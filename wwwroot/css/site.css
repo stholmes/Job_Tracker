@@ -9,3 +9,11 @@
 ul.sort-by{
   list-style: none;
 }
+
+body{
+  background-image: linear-gradient(to left, rgb(240, 240, 240), white);
+}
+
+form{
+  background-color:whitesmoke;
+}
