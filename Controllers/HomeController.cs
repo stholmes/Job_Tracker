@@ -17,8 +17,9 @@ namespace Job_Tracker.Controllers
         }
         public IActionResult Index()
         {
-
-            System.Console.WriteLine();
+            Job test = dbContext.Jobs.FirstOrDefault();
+            System.Console.WriteLine("*******************************************");
+            System.Console.WriteLine(test.JobTitle);
             return View();
         }
 
@@ -27,6 +28,13 @@ namespace Job_Tracker.Controllers
         {
             Job viewModel = new Job();
             return View(viewModel);
+        }
+
+        [HttpPost("new/job")]
+        public IActionResult CreateJob(Job submittedData){
+            System.Console.WriteLine("**************************************");
+            System.Console.WriteLine(submittedData.JobTitle);
+            return RedirectToAction("Index");
         }
     }
 }
