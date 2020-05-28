@@ -7,6 +7,7 @@ namespace Job_Tracker{
         public int JobID {get;set;}
 
         [Required]
+        [Display(Name="Position Title")]
         public string JobTitle {get;set;}
 
         [Display(Name="Posting URL")]
@@ -26,15 +27,11 @@ namespace Job_Tracker{
         public bool isRejected {get;set;} = false;
         
 
-        public bool hasRequestedInterview {get;set;}
-
-        [DataType(DataType.Date)]
-        public DateTime InterviewDate {get;set;}
-
+        
         public int CompanyID {get;set;}
 
         public Company Company {get;set;}
 
-        public int RecruiterID {get;set;}
+    
     }
 }

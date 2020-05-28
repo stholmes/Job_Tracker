@@ -7,6 +7,7 @@ namespace Job_Tracker{
         public int CompanyID {get;set;}
 
         [Required]
+        [Display(Name ="Company Name")]
         public string CompanyName {get;set;}
 
 
